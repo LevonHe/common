@@ -1,0 +1,16 @@
+# Editor configuration
+/.idea
+/.vscode
+
+# Ignore local or CI ".npmrc"
+.npmrc
+
+# Dependency directory
+node_modules
+
+# Output of `npm pack`
+/*.tgz
+
+# Ignore folder of file with `-gitignore`
+**/*-gitignore/**
+**/*-gitignore*
