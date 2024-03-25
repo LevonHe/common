@@ -1,5 +1,5 @@
 import { type } from './type'
-function clone (source) {
+function clone(source) {
   const t = type(source)
   if (t !== 'object' && t !== 'array') {
     return source
@@ -19,6 +19,8 @@ function clone (source) {
       target[i] = clone(source[i])
     }
   }
+
+  return target
 }
 
 let a = {
@@ -26,4 +28,18 @@ let a = {
 }
 
 let b = clone(a)
+
+function getUrlParam(key) {
+  const query = location.search[0] === '?' ? location.search.slice(1) : location.search
+  const map = query.split('&').reduce((data, key) => {
+    const arr = key.split('=')
+    data[arr[0]] = arr[1]
+    return data
+  }, {})
+  return map[key]
+}
+
+export {
+  clone, type, getUrlParam
+}
 

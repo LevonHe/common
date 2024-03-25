@@ -9,19 +9,19 @@ var banner = `/*!
   * @license MIT
   */`
 
-function getCompiler () {
+function getCompiler() {
   return babel({
     babelrc: false,
-    presets: [
-      [
-        '@babel/preset-env',
-        {
-          targets: "> 0.25%, not dead",
-          modules: false,
-          loose: true
-        }
-      ]
-    ],
+    // presets: [
+    //   [
+    //     '@babel/preset-env',
+    //     {
+    //       targets: "> 0.25%, not dead",
+    //       modules: false,
+    //       loose: true
+    //     }
+    //   ]
+    // ],
     exclude: 'node_modules/**',
     runtimeHelpers: true,
     plugins: [
