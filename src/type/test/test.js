@@ -10,5 +10,9 @@ describe('c', function () {
     expect(type(1)).to.be('number')
     expect(type('')).to.be('string')
     expect(type(Symbol())).to.be('symbol')
+
+    expect(type({})).to.be('Object')
+    expect(type([])).to.be('Array')
+    expect(type(WeakMap)).to.be('function')
   })
 })
